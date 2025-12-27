@@ -32,7 +32,7 @@ export function Projects() {
                         viewport={{ once: true }}
                         transition={{ duration: 0.6 }}
                     >
-                        <Card className="bg-gradient-to-br from-background via-muted/10 to-accent/5 border-2 border-accent/20 overflow-hidden shadow-2xl hover:shadow-accent/10 transition-shadow">
+                        <Card className="bg-gradient-to-br from-background via-muted/10 to-accent/5 border-2 border-accent/20 overflow-hidden shadow-2xl hover:shadow-accent/20 hover:-translate-y-2 transition-all duration-300">
                             <div className="grid lg:grid-cols-2 gap-0 lg:gap-8">
 
                                 {/* Content Side */}
@@ -65,14 +65,7 @@ export function Projects() {
                                         ))}
                                     </div>
 
-                                    {/* <div className="flex gap-4">
-                                        <Button>
-                                            View Output <ExternalLink className="ml-2 w-4 h-4" />
-                                        </Button>
-                                        <Button variant="outline">
-                                            Case Study <ArrowUpRight className="ml-2 w-4 h-4" />
-                                        </Button>
-                                    </div> */}
+
                                 </div>
 
                                 {/* Details Side */}

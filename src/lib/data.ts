@@ -10,6 +10,7 @@ export const SITE_CONFIG = {
         linkedin: "https://www.linkedin.com/in/saireddyputha1/",
         github: "https://github.com/saikumarreddy",
     },
+    url: "https://saireddy.dev",
 };
 
 export const NAV_LINKS = [
@@ -74,18 +75,11 @@ export const WHY_HIRE_SAI = [
 
 export const ABOUT_CONTENT = {
     narrative: [
-        "Started as a Software Developer building enterprise microservices. Led the transition from monolithic architecture to event-driven microservices, handling 100K+ concurrent users. Now at Nutrisystem as Sr. Backend Engineer, building payment systems and meal planning APIs.",
+        "Started as a Software Developer building enterprise backend systems. Led the transition from monolithic architecture to event-driven microservices, handling 100K+ concurrent users. Now at Nutrisystem as Sr. Backend Engineer, building payment systems and meal planning APIs.",
         "My sweet spot: taking complex distributed systems and making them faster, more resilient, and easier to operate. Microservices, event-driven architecture, and cloud-native design are my core strengths. But I don't stop at backend—I deliver full-stack solutions with React/Next.js frontend expertise.",
         "I believe in clean architecture, measurable performance, and observable systems. Code isn't done until it's monitored, tested, and documented. Great engineers lift up their teams.",
-        "Recently completed Master's in Computing and Information Systems. Pursuing AWS Solutions Architect certification. Always learning—currently exploring Go for microservices and Spring AI.",
-    ],
-    achievements: [
-        { text: "Built 100K+ user systems", icon: "🚀" },
-        { text: "Optimized APIs to <200ms response time", icon: "📉" },
-        { text: "Led monolith→microservices migration", icon: "🔄" },
-        { text: "Handled $2M+ annual transaction volume", icon: "💰" },
-        { text: "Mentored junior engineers in system design", icon: "👥" },
-    ],
+        "Pursuing AWS Solutions Architect certification. Always learning—currently exploring Go for microservices and Spring AI.",
+    ]
 };
 
 export const EDUCATION = [
@@ -93,14 +87,14 @@ export const EDUCATION = [
         degree: "Master of Computing and Information Systems",
         school: "Youngstown State University",
         dates: "Jan 2023 – Dec 2024",
-        details: ["Distributed Systems & Cloud Computing", "Advanced Database Design", "Microservices Architecture", "Security & Cryptography"],
-        gpa: "3.7+", // Placeholder based on prompt hint
+        details: ["Distributed Systems & Cloud Computing", "Advanced Database Design", "Microservices Architecture", "Security"],
+        gpa: "4.0",
     },
     {
         degree: "Bachelor of Engineering",
         school: "Lovely Professional University",
         dates: "Aug 2014 – Jun 2018",
-        focus: "Computer Science / Software Engineering",
+        focus: "Software Engineering",
     },
 ];
 
@@ -126,16 +120,6 @@ export const PROFESSIONAL_EXPERIENCE = [
             { text: "$2M+ GMV Processed Annually", subtext: "Zero Payment Failures" },
             { text: "60% Cache Hit Ratio", subtext: "Via Redis optimization" },
         ],
-        achievements: [
-            "Built scalable RESTful microservices (Java 17, Spring Boot) for product catalog, meal plans, and subscription workflows.",
-            "Integrated payment gateways (Braintree, SVS Gift Card) with zero transaction failures and PCI-DSS compliance.",
-            "Optimized API performance using Redis caching strategy reducing database load by 60% and response times to <200ms.",
-            "Designed JWT-based authentication and role-based authorization using Spring Security, securing 100K+ user accounts.",
-            "Implemented async job processing for order management and subscription renewals using Spring Async.",
-            "Built AWS S3 integration for customer review data processing supporting internal analytics and reporting.",
-            "Wrote comprehensive unit and integration tests (JUnit, Mockito, Spring Test) maintaining 85%+ code coverage.",
-            "Monitored application behavior using AWS CloudWatch assisting in debugging and incident resolution.",
-        ],
         tech: ["Java 17", "Spring Boot", "REST APIs", "Spring Security", "JWT", "Oracle DB", "Redis", "AWS", "Jenkins", "SonarQube"],
     },
     {
@@ -147,15 +131,6 @@ export const PROFESSIONAL_EXPERIENCE = [
             { text: "1000s/sec Event Processing", subtext: "Via Kafka" },
             { text: "40% ↓ Data Transfer", subtext: "Via GraphQL" },
             { text: "<100ms Latency", subtext: "End-to-end" },
-        ],
-        achievements: [
-            "Architected and built event-driven microservices using Spring Boot with RESTful and GraphQL APIs.",
-            "Led migration of monolithic application to microservices architecture reducing deployment time by 60%.",
-            "Implemented Apache Kafka for asynchronous communication processing 1000s of events per second with <100ms latency.",
-            "Built data migration and synchronization pipelines using Oracle, GoldenGate, and Kafka.",
-            "Developed full-stack features: React.js/Redux/TypeScript frontend + Java backend.",
-            "Optimized backend performance through JPA/Hibernate query tuning and multithreading.",
-            "Implemented CI/CD pipelines using Jenkins and GitHub Actions in Agile environment.",
         ],
         tech: ["Java 8/11", "Spring Boot", "Spring Cloud", "Kafka", "RabbitMQ", "Oracle", "MongoDB", "React.js", "Redux", "Docker", "AWS", "Jenkins"],
     },
@@ -200,9 +175,3 @@ export const OTHER_PROJECTS = [
         tech: "Java | Spring Boot | GraphQL Java",
     },
 ];
-
-//export const CERTIFICATIONS = [
-//{ name: "[Certification Name]", status: "Completed", year: "2024" },
-//  { name: "AWS Solutions Architect Associate", status: "Completed", expected: "Q2 2025" },
-//{ name: "Spring Certified Associate Java Programmer", status: "In Progress", expected: "Q1 2025" },
-//];

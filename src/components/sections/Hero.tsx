@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/Button";
 import { Badge } from "@/components/ui/Badge";
 import { HERO_CONTENT, SITE_CONFIG } from "@/lib/data";
 import { motion } from "framer-motion";
-import { Download, Linkedin, Mail, ArrowRight } from "lucide-react";
+import { Download, Linkedin, Mail, ArrowRight, Github } from "lucide-react";
 import Image from "next/image";
 
 export function Hero() {
@@ -33,9 +33,18 @@ export function Hero() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.1 }}
-                    className="text-4xl md:text-6xl font-bold tracking-tight mb-6 bg-clip-text text-transparent bg-gradient-to-b from-white to-white/60"
+                    className="text-4xl md:text-6xl font-bold tracking-tight mb-6"
                 >
-                    {HERO_CONTENT.headline}
+                    <motion.span
+                        className="mr-3 inline-block bg-gradient-to-r from-[#4285F4] via-[#EA4335] to-[#FBBC05] bg-[length:200%_auto] bg-clip-text text-transparent"
+                        animate={{ backgroundPosition: ["0% center", "200% center"] }}
+                        transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
+                    >
+                        I&apos;m a
+                    </motion.span>
+                    <span className="bg-clip-text text-transparent bg-gradient-to-b from-white to-white/60">
+                        {HERO_CONTENT.headline}
+                    </span>
                 </motion.h1>
 
                 {/* Intro */}
@@ -73,8 +82,8 @@ export function Hero() {
                             </a>
                         </Button>
                         <Button variant="outline" size="lg" className="px-4" asChild>
-                            <a href={`mailto:${SITE_CONFIG.email}`}>
-                                <Mail className="h-5 w-5" />
+                            <a href={SITE_CONFIG.socials.github} target="_blank" rel="noopener noreferrer">
+                                <Github className="h-5 w-5" />
                             </a>
                         </Button>
                     </div>

@@ -17,20 +17,14 @@ export function About() {
                     viewport={{ once: true }}
                     className="lg:col-span-4 flex flex-col items-center"
                 >
-                    <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-2xl overflow-hidden border-2 border-white/10 shadow-2xl">
-                        {/* Placeholder for Profile Image */}
-                        <div className="absolute inset-0 bg-gradient-to-br from-primary to-accent/20 flex items-center justify-center text-white/20 font-bold text-4xl">
-                            Profile
-                        </div>
-                    </div>
-                    <div className="mt-8 grid grid-cols-2 gap-4 w-full max-w-sm">
-                        {/* Key Achievements Icons */}
-                        {ABOUT_CONTENT.achievements.map((achievement, idx) => (
-                            <div key={idx} className="flex items-center gap-2 text-xs text-muted-foreground bg-white/5 p-2 rounded border border-white/5">
-                                <span className="text-lg">{achievement.icon}</span>
-                                <span>{achievement.text}</span>
-                            </div>
-                        ))}
+                    <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-2xl overflow-hidden border-2 border-white/10 shadow-2xl bg-white/5">
+                        <Image
+                            src="/profile.png"
+                            alt="Sai Kumar Reddy"
+                            fill
+                            className="object-cover"
+                            priority
+                        />
                     </div>
                 </motion.div>
 

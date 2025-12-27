@@ -11,13 +11,32 @@ import { motion, AnimatePresence } from "framer-motion";
 export function Navbar() {
     const [isOpen, setIsOpen] = React.useState(false);
     const [scrolled, setScrolled] = React.useState(false);
+    const [activeSection, setActiveSection] = React.useState("hero");
 
     React.useEffect(() => {
         const handleScroll = () => {
             setScrolled(window.scrollY > 20);
         };
         window.addEventListener("scroll", handleScroll);
-        return () => window.removeEventListener("scroll", handleScroll);
+
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        setActiveSection(entry.target.id);
+                    }
+                });
+            },
+            { rootMargin: "-100px 0px -50% 0px" }
+        );
+
+        const sections = document.querySelectorAll("section[id]");
+        sections.forEach((section) => observer.observe(section));
+
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+            sections.forEach((section) => observer.unobserve(section));
+        };
     }, []);
 
     return (
@@ -42,16 +61,25 @@ export function Navbar() {
 
                 {/* Desktop Nav */}
                 <nav className="hidden md:flex items-center gap-6">
-                    {NAV_LINKS.map((link) => (
-                        <Link
-                            key={link.label}
-                            href={link.href}
-                            className="text-sm font-medium text-muted-foreground hover:text-accent transition-colors relative group"
-                        >
-                            {link.label}
-                            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-accent transition-all duration-300 group-hover:w-full" />
-                        </Link>
-                    ))}
+                    {NAV_LINKS.map((link) => {
+                        const isActive = activeSection === link.href.substring(1);
+                        return (
+                            <Link
+                                key={link.label}
+                                href={link.href}
+                                className={cn(
+                                    "text-sm font-medium transition-colors relative group",
+                                    isActive ? "text-accent" : "text-muted-foreground hover:text-accent"
+                                )}
+                            >
+                                {link.label}
+                                <span className={cn(
+                                    "absolute -bottom-1 left-0 h-0.5 bg-accent transition-all duration-300",
+                                    isActive ? "w-full" : "w-0 group-hover:w-full"
+                                )} />
+                            </Link>
+                        );
+                    })}
                     <Button variant="outline" size="sm" asChild>
                         <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
                     </Button>
@@ -76,16 +104,22 @@ export function Navbar() {
                         className="md:hidden bg-background border-b border-white/10 overflow-hidden"
                     >
                         <nav className="flex flex-col p-4 gap-4">
-                            {NAV_LINKS.map((link) => (
-                                <Link
-                                    key={link.label}
-                                    href={link.href}
-                                    className="text-sm font-medium text-muted-foreground hover:text-accent transition-colors p-2"
-                                    onClick={() => setIsOpen(false)}
-                                >
-                                    {link.label}
-                                </Link>
-                            ))}
+                            {NAV_LINKS.map((link) => {
+                                const isActive = activeSection === link.href.substring(1);
+                                return (
+                                    <Link
+                                        key={link.label}
+                                        href={link.href}
+                                        className={cn(
+                                            "text-sm font-medium transition-colors p-2",
+                                            isActive ? "text-accent bg-accent/10 rounded-md" : "text-muted-foreground hover:text-accent"
+                                        )}
+                                        onClick={() => setIsOpen(false)}
+                                    >
+                                        {link.label}
+                                    </Link>
+                                );
+                            })}
                             <Button variant="outline" className="w-full" asChild>
                                 <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">View Resume</a>
                             </Button>

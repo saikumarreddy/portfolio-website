@@ -21,20 +21,8 @@ export function Contact() {
                         <div className="p-8 md:p-12 bg-accent/10 flex flex-col justify-center">
                             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Let&apos;s Work Together</h2>
                             <p className="text-muted-foreground mb-8 leading-relaxed">
-                                I&apos;m currently open to new opportunities. Whether you have a question or just want to say hi, I&apos;ll try my best to get back to you!
+                                Whether you have a question or just want to say hi, I&apos;ll try my best to get back to you!
                             </p>
-
-                            <div className="space-y-4">
-                                <div className="flex items-center gap-3 text-white">
-                                    <div className="p-2 bg-white/10 rounded-lg">
-                                        <span className="text-xl">💼</span>
-                                    </div>
-                                    <div>
-                                        <div className="font-semibold">Availability</div>
-                                        <div className="text-sm text-muted-foreground">Immediate | Remote or Hybrid</div>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
 
                         {/* Right Side: Actions */}

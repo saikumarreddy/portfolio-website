@@ -74,18 +74,7 @@ export function Experience() {
                                             ))}
                                         </div>
 
-                                        {/* Achievements List */}
-                                        {/* <div className="space-y-3">
-                                            <h4 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground">Key Achievements</h4>
-                                            <ul className="space-y-3">
-                                                {role.achievements.map((achievement, i) => (
-                                                    <li key={i} className="flex items-start gap-3">
-                                                        <span className="mt-1.5 min-w-[6px] h-[6px] rounded-full bg-accent" />
-                                                        <span className="text-muted-foreground text-sm leading-relaxed">{achievement}</span>
-                                                    </li>
-                                                ))}
-                                            </ul>
-                                        </div> */}
+
 
                                     </div>
                                 </div>
