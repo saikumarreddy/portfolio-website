@@ -53,7 +53,7 @@ export function Navbar() {
                         </Link>
                     ))}
                     <Button variant="outline" size="sm" asChild>
-                        <a href="/resume.pdf" download>Resume</a>
+                        <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
                     </Button>
                 </nav>
 
@@ -87,7 +87,7 @@ export function Navbar() {
                                 </Link>
                             ))}
                             <Button variant="outline" className="w-full" asChild>
-                                <a href="/resume.pdf" download>Download Resume</a>
+                                <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">View Resume</a>
                             </Button>
                         </nav>
                     </motion.div>

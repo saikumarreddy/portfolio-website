@@ -62,7 +62,7 @@ export function Hero() {
 
                     <div className="flex gap-2">
                         <Button variant="outline" size="lg" asChild>
-                            <a href="/resume.pdf" download className="gap-2">
+                            <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="gap-2">
                                 <Download className="h-4 w-4" />
                                 Resume
                             </a>
