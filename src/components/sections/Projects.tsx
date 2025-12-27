@@ -65,14 +65,14 @@ export function Projects() {
                                         ))}
                                     </div>
 
-                                    <div className="flex gap-4">
+                                    {/* <div className="flex gap-4">
                                         <Button>
                                             View Output <ExternalLink className="ml-2 w-4 h-4" />
                                         </Button>
                                         <Button variant="outline">
                                             Case Study <ArrowUpRight className="ml-2 w-4 h-4" />
                                         </Button>
-                                    </div>
+                                    </div> */}
                                 </div>
 
                                 {/* Details Side */}

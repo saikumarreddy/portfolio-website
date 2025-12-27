@@ -75,7 +75,7 @@ export function Experience() {
                                         </div>
 
                                         {/* Achievements List */}
-                                        <div className="space-y-3">
+                                        {/* <div className="space-y-3">
                                             <h4 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground">Key Achievements</h4>
                                             <ul className="space-y-3">
                                                 {role.achievements.map((achievement, i) => (
@@ -85,7 +85,7 @@ export function Experience() {
                                                     </li>
                                                 ))}
                                             </ul>
-                                        </div>
+                                        </div> */}
 
                                     </div>
                                 </div>
