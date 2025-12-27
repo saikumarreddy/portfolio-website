@@ -8,7 +8,7 @@ export const SITE_CONFIG = {
     location: "Phoenix, Arizona",
     socials: {
         linkedin: "https://www.linkedin.com/in/saireddyputha1/",
-        github: "https://github.com/", // Placeholder
+        github: "https://github.com/saikumarreddy",
     },
 };
 

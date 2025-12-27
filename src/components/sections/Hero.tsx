@@ -38,16 +38,6 @@ export function Hero() {
                     {HERO_CONTENT.headline}
                 </motion.h1>
 
-                {/* Subheading */}
-                <motion.p
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: 0.2 }}
-                    className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl"
-                >
-                    {HERO_CONTENT.subheading}
-                </motion.p>
-
                 {/* Intro */}
                 <motion.p
                     initial={{ opacity: 0, y: 20 }}
