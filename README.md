@@ -14,7 +14,7 @@
 
 A high-performance, modern portfolio website built with **Next.js 15**, **React 19**, and **Tailwind CSS 4**. Designed to showcase engineering excellence in Full Stack Java development, featuring microservices architecture highlights, event-driven systems, and cloud-native solutions.
 
-[**Live Demo »**](https://saireddy.dev) | [**Download Resume »**](https://saireddy.dev/resume.pdf)
+[**Live Demo »**](https://sputha.com) | [**Download Resume »**](https://sputha.com/resume.pdf)
 
 ## ✨ Key Features
 
