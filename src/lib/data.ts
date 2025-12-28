@@ -9,7 +9,7 @@ export const SITE_CONFIG = {
         linkedin: "https://www.linkedin.com/in/saireddyputha1/",
         github: "https://github.com/saikumarreddy",
     },
-    url: "https://sputha.com",
+    url: "https://saikumarreddy.github.io/portfolio-website",
 };
 
 export const NAV_LINKS = [
