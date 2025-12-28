@@ -16,13 +16,13 @@ export default function Home() {
     <main className="min-h-screen bg-background text-foreground selection:bg-accent/20 selection:text-accent">
       <Navbar />
       <Hero />
-      <Impact />
-      <WhyHireSai />
+
       <About />
-      <Education />
+
       <TechStack />
       <Experience />
       <Projects />
+      <Education />
       {/*<Certifications />*/}
       <Contact />
       <Footer />

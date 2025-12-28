@@ -26,7 +26,7 @@ export function WhyHireSai() {
                     viewport={{ once: true }}
                     className="text-center mb-12"
                 >
-                    <h2 className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-white/80">
+                    <h2 className="text-3xl font-bold text-foreground">
                         Why Hire Sai?
                     </h2>
                     <div className="h-1 w-20 bg-accent mx-auto rounded-full mt-4" />
@@ -48,7 +48,7 @@ export function WhyHireSai() {
                                         <div className="p-3 bg-accent/10 w-fit rounded-lg mb-4">
                                             <Icon className="w-6 h-6 text-accent" />
                                         </div>
-                                        <CardTitle className="text-xl text-white">
+                                        <CardTitle className="text-xl text-foreground">
                                             {item.title}
                                         </CardTitle>
                                     </CardHeader>

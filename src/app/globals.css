@@ -3,83 +3,54 @@
 @theme {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  
+
   --color-primary: var(--primary);
   --color-primary-foreground: var(--primary-foreground);
-  
+
   --color-secondary: var(--secondary);
   --color-secondary-foreground: var(--secondary-foreground);
-  
+
   --color-accent: var(--accent);
   --color-accent-foreground: var(--accent-foreground);
-  
+
   --color-muted: var(--muted);
   --color-muted-foreground: var(--muted-foreground);
 
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
   --font-mono: var(--font-fira-code), ui-monospace, SFMono-Regular, monospace;
-  
-  /* Semantic Colors */
-  --color-success: #10b981;
-  --color-warning: #f59e0b;
-  --color-info: #3b82f6;
-  --color-expert: #9ca3af;
 }
 
-/* Base Light Mode (Fallback, though we prefer Dark) */
+/* Light Mode (Default) */
 :root {
   --background: #ffffff;
   --foreground: #0f172a;
-  
+
   --primary: #1e3a5f;
   --primary-foreground: #ffffff;
-  
+
   --secondary: #f1f5f9;
   --secondary-foreground: #0f172a;
-  
+
   --accent: #00bcd4;
   --accent-foreground: #ffffff;
-  
+
   --muted: #f1f5f9;
   --muted-foreground: #64748b;
 }
 
-/* Defaulting to Dark Mode-like scheme for "tech" feel or standard Dark Mode */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0f0f0f;
-    --foreground: #f5f5f5;
-    
-    --primary: #1e3a5f;
-    --primary-foreground: #ffffff;
-    
-    --secondary: #1e293b;
-    --secondary-foreground: #f8fafc;
-    
-    --accent: #00bcd4;
-    --accent-foreground: #ffffff;
-    
-    --muted: #1e293b;
-    --muted-foreground: #94a3b8;
-  }
-}
-
-/* Force Dark Mode by default if requested, or just use the system preference properly. 
-   The prompt asks for "Deep tech blue... dark background #0f0f0f". 
-   Let's make the default root variables match the dark theme desired.
-*/
-:root {
+/* Dark Mode */
+.dark {
   --background: #0f0f0f;
   --foreground: #f5f5f5;
 
-  --primary: #1e3a5f; 
+  --primary: #1e3a5f;
   --primary-foreground: #ffffff;
 
-  --secondary: #1a1a1a;
-  --secondary-foreground: #ffffff;
+  --secondary: #1e293b;
+  --secondary-foreground: #f8fafc;
 
   --accent: #00bcd4;
-  --accent-foreground: #000000;
+  --accent-foreground: #ffffff;
 
   --muted: #1e293b;
   --muted-foreground: #94a3b8;
@@ -89,10 +60,16 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* Typography Enhancements */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   letter-spacing: -0.025em;
   font-weight: 700;
 }

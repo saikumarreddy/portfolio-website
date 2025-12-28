@@ -17,7 +17,7 @@ export function Experience() {
                     viewport={{ once: true }}
                     className="text-center mb-16"
                 >
-                    <h2 className="text-3xl font-bold text-white">Professional Experience</h2>
+                    <h2 className="text-3xl font-bold">Professional Experience</h2>
                     <div className="h-1 w-20 bg-accent mx-auto rounded-full mt-4" />
                 </motion.div>
 
@@ -30,11 +30,11 @@ export function Experience() {
                             viewport={{ once: true }}
                             transition={{ delay: index * 0.1 }}
                         >
-                            <Card className="bg-background/80 border-white/10 overflow-hidden">
+                            <Card className="bg-background/80 border-2 border-accent/20 overflow-hidden shadow-xl">
                                 <div className="grid md:grid-cols-12 gap-0 md:gap-8">
 
                                     {/* Left Sidebar (Role Info) - 4 Cols */}
-                                    <div className="md:col-span-4 bg-muted/20 p-6 md:p-8 flex flex-col justify-between border-b md:border-b-0 md:border-r border-white/10">
+                                    <div className="md:col-span-4 bg-muted/20 p-6 md:p-8 flex flex-col justify-between border-b md:border-b-0 md:border-r border-accent/10">
                                         <div>
                                             <div className="flex items-center gap-2 text-accent font-semibold mb-2">
                                                 <Briefcase className="w-5 h-5" />
@@ -65,14 +65,24 @@ export function Experience() {
                                     <div className="md:col-span-8 p-6 md:p-8 space-y-8">
 
                                         {/* Metrics Grid */}
-                                        <div className="grid grid-cols-2 gap-4">
+                                        <div className="grid grid-cols-2 gap-4 mb-8">
                                             {role.metrics.map((metric, i) => (
-                                                <div key={i} className="bg-accent/5 border border-accent/10 rounded-lg p-3">
-                                                    <div className="text-lg font-bold text-accent">{metric.text.split(' ')[0]}</div>
-                                                    <div className="text-xs text-muted-foreground">{metric.subtext}</div>
+                                                <div key={i} className="bg-accent/5 border border-accent/10 rounded-lg p-4">
+                                                    <div className="text-lg font-bold text-accent mb-1">{metric.text}</div>
+                                                    <div className="text-xs text-muted-foreground leading-tight">{metric.subtext}</div>
                                                 </div>
                                             ))}
                                         </div>
+
+                                        {/* Achievements */}
+                                        <ul className="space-y-3">
+                                            {role.achievements.map((achievement, i) => (
+                                                <li key={i} className="flex items-start gap-3 text-muted-foreground">
+                                                    <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-accent shrink-0" />
+                                                    <span className="text-sm md:text-base leading-relaxed">{achievement}</span>
+                                                </li>
+                                            ))}
+                                        </ul>
 
 
 

@@ -7,6 +7,8 @@ import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/Button";
 import { NAV_LINKS, SITE_CONFIG } from "@/lib/data";
 import { motion, AnimatePresence } from "framer-motion";
+import { ThemeToggle } from "@/components/ui/ThemeToggle";
+import Image from "next/image";
 
 export function Navbar() {
     const [isOpen, setIsOpen] = React.useState(false);
@@ -44,17 +46,23 @@ export function Navbar() {
             className={cn(
                 "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
                 scrolled
-                    ? "bg-background/80 backdrop-blur-md border-b border-white/10 py-3"
+                    ? "bg-background/80 backdrop-blur-md border-b border-border py-3 shadow-sm"
                     : "bg-transparent py-5"
             )}
         >
             <div className="container mx-auto px-4 md:px-6 max-w-7xl flex items-center justify-between">
                 {/* Logo */}
                 <Link href="/" className="flex items-center gap-2 group">
-                    <div className="p-2 bg-primary/20 rounded-lg group-hover:bg-primary/30 transition-colors">
-                        <Code2 className="h-6 w-6 text-accent" />
+                    <div className="relative w-8 h-8 md:w-10 md:h-10 rounded-lg overflow-hidden group-hover:scale-105 transition-transform duration-300">
+                        <Image
+                            src="/favicon.png"
+                            alt="Logo"
+                            fill
+                            className="object-contain"
+                            priority
+                        />
                     </div>
-                    <span className="font-bold text-lg tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-white to-white/70">
+                    <span className="font-bold text-lg md:text-xl tracking-tight text-foreground group-hover:text-accent transition-colors">
                         {SITE_CONFIG.name}
                     </span>
                 </Link>
@@ -80,9 +88,8 @@ export function Navbar() {
                             </Link>
                         );
                     })}
-                    <Button variant="outline" size="sm" asChild>
-                        <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
-                    </Button>
+                    <ThemeToggle />
+
                 </nav>
 
                 {/* Mobile Toggle */}
@@ -120,9 +127,10 @@ export function Navbar() {
                                     </Link>
                                 );
                             })}
-                            <Button variant="outline" className="w-full" asChild>
-                                <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">View Resume</a>
-                            </Button>
+
+                            <div className="flex justify-center pt-2">
+                                <ThemeToggle />
+                            </div>
                         </nav>
                     </motion.div>
                 )}

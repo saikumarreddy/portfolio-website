@@ -35,14 +35,10 @@ export function Hero() {
                     transition={{ duration: 0.5, delay: 0.1 }}
                     className="text-4xl md:text-6xl font-bold tracking-tight mb-6"
                 >
-                    <motion.span
-                        className="mr-3 inline-block bg-gradient-to-r from-[#4285F4] via-[#EA4335] to-[#FBBC05] bg-[length:200%_auto] bg-clip-text text-transparent"
-                        animate={{ backgroundPosition: ["0% center", "200% center"] }}
-                        transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
-                    >
+                    <span className="mr-3 text-foreground">
                         I&apos;m a
-                    </motion.span>
-                    <span className="bg-clip-text text-transparent bg-gradient-to-b from-white to-white/60">
+                    </span>
+                    <span className="text-foreground">
                         {HERO_CONTENT.headline}
                     </span>
                 </motion.h1>

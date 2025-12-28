@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Fira_Code } from "next/font/google";
 import "./globals.css";
+import { Providers } from "./providers";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -40,16 +41,16 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth" suppressHydrationWarning>
       <head>
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon.png" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/favicon.png" />
-        <link rel="icon" type="image/png" sizes="192x192" href="/favicon.png" />
-        <link rel="icon" type="image/png" sizes="512x512" href="/favicon.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon.png?v=2" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=2" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/favicon.png?v=2" />
+        <link rel="icon" type="image/png" sizes="192x192" href="/favicon.png?v=2" />
+        <link rel="icon" type="image/png" sizes="512x512" href="/favicon.png?v=2" />
       </head>
       <body
         className={`${inter.variable} ${firaCode.variable} antialiased bg-background text-foreground`}
       >
-        {children}
+        <Providers>{children}</Providers>
       </body>
     </html>
   );

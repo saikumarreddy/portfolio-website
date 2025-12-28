@@ -16,7 +16,7 @@ export function Education() {
                     viewport={{ once: true }}
                     className="text-center mb-12"
                 >
-                    <h2 className="text-3xl font-bold text-white">Education & Credentials</h2>
+                    <h2 className="text-3xl font-bold text-foreground">Education & Credentials</h2>
                     <div className="h-1 w-20 bg-accent mx-auto rounded-full mt-4" />
                 </motion.div>
 
@@ -39,13 +39,13 @@ export function Education() {
 
                             {/* Content Card */}
                             <div className="ml-8 md:ml-0 md:w-1/2 px-4">
-                                <Card className="bg-background/50 backdrop-blur border-white/10 hover:border-accent/30 transition-all">
+                                <Card className="bg-background/50 backdrop-blur border-2 border-accent/20 hover:border-accent/40 transition-all shadow-xl">
                                     <CardContent className="p-6">
                                         <div className="flex items-center gap-2 text-accent mb-2">
                                             <GraduationCap className="w-5 h-5" />
                                             <span className="font-semibold">{edu.school}</span>
                                         </div>
-                                        <h3 className="text-xl font-bold text-white mb-2">{edu.degree}</h3>
+                                        <h3 className="text-xl font-bold text-foreground mb-2">{edu.degree}</h3>
                                         <div className="flex items-center gap-2 text-sm text-muted-foreground mb-4">
                                             <Calendar className="w-4 h-4" />
                                             <span>{edu.dates}</span>

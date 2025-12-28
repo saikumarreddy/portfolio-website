@@ -7,14 +7,14 @@ import { TECH_STACK } from "@/lib/data";
 import { motion } from "framer-motion";
 
 const categories = [
-    { id: "backend", label: "Backend", color: "bg-blue-500/10 text-blue-400 border-blue-500/20" },
-    { id: "frontend", label: "Frontend", color: "bg-emerald-500/10 text-emerald-400 border-emerald-500/20" },
-    { id: "database", label: "Databases", color: "bg-amber-500/10 text-amber-400 border-amber-500/20" },
-    { id: "api", label: "API & Messaging", color: "bg-red-500/10 text-red-400 border-red-500/20" },
-    { id: "cloud", label: "Cloud & Infra", color: "bg-purple-500/10 text-purple-400 border-purple-500/20" },
-    { id: "devops", label: "DevOps", color: "bg-slate-500/10 text-slate-400 border-slate-500/20" },
-    { id: "monitoring", label: "Observability", color: "bg-cyan-500/10 text-cyan-400 border-cyan-500/20" },
-    { id: "testing", label: "Testing", color: "bg-pink-500/10 text-pink-400 border-pink-500/20" },
+    { id: "backend", label: "Backend", color: "text-blue-600 dark:text-blue-400" },
+    { id: "frontend", label: "Frontend", color: "text-emerald-600 dark:text-emerald-400" },
+    { id: "database", label: "Databases", color: "text-amber-600 dark:text-amber-400" },
+    { id: "api", label: "API & Messaging", color: "text-red-600 dark:text-red-400" },
+    { id: "cloud", label: "Cloud & Infra", color: "text-purple-600 dark:text-purple-400" },
+    { id: "devops", label: "DevOps", color: "text-slate-600 dark:text-slate-400" },
+    { id: "monitoring", label: "Observability", color: "text-cyan-600 dark:text-cyan-400" },
+    { id: "testing", label: "Testing", color: "text-pink-600 dark:text-pink-400" },
 ];
 
 export function TechStack() {
@@ -27,7 +27,7 @@ export function TechStack() {
                     viewport={{ once: true }}
                     className="text-center mb-16"
                 >
-                    <h2 className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-white/70">
+                    <h2 className="text-3xl font-bold text-foreground">
                         Technical Arsenal
                     </h2>
                     <div className="h-1 w-20 bg-accent mx-auto rounded-full mt-4" />
@@ -45,16 +45,17 @@ export function TechStack() {
                                 viewport={{ once: true }}
                                 transition={{ delay: idx * 0.05 }}
                             >
-                                <Card className="h-full bg-white/5 border-white/5 hover:border-accent/20 transition-all group">
+                                <Card className="h-full bg-card border-2 border-accent/20 hover:border-accent/40 shadow-xl transition-all group">
                                     <CardContent className="p-6">
-                                        <h3 className={`text-lg font-semibold mb-4 flex items-center gap-2 ${cat.color.split(' ')[1]}`}>
+                                        <h3 className={`text-lg font-semibold mb-4 flex items-center gap-2 ${cat.color}`}>
                                             {cat.label}
                                         </h3>
                                         <div className="flex flex-wrap gap-2">
                                             {items.map((item) => (
                                                 <Badge
                                                     key={item}
-                                                    className={`bg-black/20 hover:bg-black/40 border-white/5 transition-all cursor-default text-xs`}
+                                                    variant="secondary"
+                                                    className="bg-secondary/40 hover:bg-secondary/60 transition-all cursor-default text-xs"
                                                 >
                                                     {item}
                                                 </Badge>

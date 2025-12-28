@@ -1,11 +1,10 @@
 import { Github, Linkedin, Mail, Twitter } from "lucide-react";
 
 export const SITE_CONFIG = {
-    name: "Sai Kumar Reddy",
-    title: "Senior Full Stack Java Developer",
+    name: "Sai Reddy",
+    title: "Full Stack Java Developer",
     email: "saireddyputha1@gmail.com",
     phone: "+1(602) 842-8825",
-    location: "Phoenix, Arizona",
     socials: {
         linkedin: "https://www.linkedin.com/in/saireddyputha1/",
         github: "https://github.com/saikumarreddy",
@@ -14,18 +13,17 @@ export const SITE_CONFIG = {
 };
 
 export const NAV_LINKS = [
-    { label: "Home", href: "#hero" },
-    { label: "Impact", href: "#impact" },
-    { label: "Why Sai?", href: "#why-hire-sai" },
+
     { label: "About", href: "#about" },
     { label: "Skills", href: "#skills" },
     { label: "Experience", href: "#experience" },
     { label: "Projects", href: "#projects" },
+    { label: "Education", href: "#education" },
     { label: "Contact", href: "#contact" },
 ];
 
 export const HERO_CONTENT = {
-    headline: "Senior Full Stack Java Developer",
+    headline: "Full Stack Java Developer",
     intro: "I design and build scalable distributed systems that handle 100K+ concurrent users. Specializing in microservices, event-driven architecture, and cloud-native solutions. Currently building payment systems at Nutrisystem.",
     ctas: {
         primary: "View My Latest Work",
@@ -95,6 +93,7 @@ export const EDUCATION = [
         school: "Lovely Professional University",
         dates: "Aug 2014 – Jun 2018",
         focus: "Software Engineering",
+        details: ["Data Structures & Algorithms", "Database Management", "Software Engineering", "Web Development"],
     },
 ];
 
@@ -111,14 +110,20 @@ export const TECH_STACK = {
 
 export const PROFESSIONAL_EXPERIENCE = [
     {
-        role: "Sr. Java Backend Developer",
+        role: "Java Backend Developer",
         company: "Nutrisystem",
         dates: "Jan 2025 – Present",
         metrics: [
-            { text: "100K+ Concurrent Users", subtext: "Handled in production" },
-            { text: "<200ms API Response Time", subtext: "Under high load" },
-            { text: "$2M+ GMV Processed Annually", subtext: "Zero Payment Failures" },
-            { text: "60% Cache Hit Ratio", subtext: "Via Redis optimization" },
+            { text: "100K+ Concurrent Users", subtext: "System throughput optimized" },
+            { text: "<200ms API Response", subtext: "P99 latency reduction" },
+            { text: "$2M+ GMV Annually", subtext: "Secure payment processing" },
+            { text: "60% Cache Hit Ratio", subtext: "Redis-driven performance" },
+        ],
+        achievements: [
+            "Leading the development of highly scalable microservices for meal planning and subscription-based payment systems.",
+            "Optimizing distributed systems performance using Redis caching and database query tuning to achieve <200ms P95 latency.",
+            "Architecting secure and PCI-DSS compliant payment processing flows handling over $2M in annual GMV.",
+            "Collaborating with cross-functional teams to drive technical strategy and improve system observability using ELK stack."
         ],
         tech: ["Java 17", "Spring Boot", "REST APIs", "Spring Security", "JWT", "Oracle DB", "Redis", "AWS", "Jenkins", "SonarQube"],
     },
@@ -127,10 +132,16 @@ export const PROFESSIONAL_EXPERIENCE = [
         company: "Wipro",
         dates: "Jun 2018 – Dec 2022",
         metrics: [
-            { text: "60% ↓ Deployment Time", subtext: "Monolith → Microservices" },
-            { text: "1000s/sec Event Processing", subtext: "Via Kafka" },
-            { text: "40% ↓ Data Transfer", subtext: "Via GraphQL" },
-            { text: "<100ms Latency", subtext: "End-to-end" },
+            { text: "60% ↑ Deployment Frequency", subtext: "Monolith → Microservices" },
+            { text: "1000s events/sec", subtext: "High-volume Kafka streams" },
+            { text: "40% resource savings", subtext: "GraphQL query optimization" },
+            { text: "Zero Downtime", subtext: "Resilient systems design" },
+        ],
+        achievements: [
+            "Spearheaded the migration of legacy monolithic applications to event-driven microservices architecture using Spring Cloud and Kafka.",
+            "Implemented real-time data streaming solutions processing thousands of events per second with Apache Kafka.",
+            "Reduced data transfer overhead by 40% through the implementation of a GraphQL API Gateway.",
+            "Automated CI/CD pipelines using Jenkins and Docker, reducing deployment cycle time from days to minutes."
         ],
         tech: ["Java 8/11", "Spring Boot", "Spring Cloud", "Kafka", "RabbitMQ", "Oracle", "MongoDB", "React.js", "Redux", "Docker", "AWS", "Jenkins"],
     },

@@ -43,10 +43,10 @@ export function Impact() {
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.4, delay: index * 0.05 }}
                             >
-                                <Card className="h-full bg-white/5 border-white/10 hover:border-accent/40 hover:bg-white/10 transition-all">
+                                <Card className="h-full bg-card hover:border-accent/40 transition-all shadow-sm">
                                     <CardContent className="flex flex-col items-center justify-center p-6 text-center h-full">
                                         <Icon className="w-8 h-8 text-accent mb-4 opacity-80" />
-                                        <div className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-white/70 mb-2">
+                                        <div className="text-3xl md:text-4xl font-bold text-foreground mb-2">
                                             {metric.value}
                                         </div>
                                         <p className="text-sm text-muted-foreground font-medium">

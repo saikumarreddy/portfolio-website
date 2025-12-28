@@ -14,12 +14,12 @@ export function Contact() {
             <div className="absolute inset-0 bg-accent/5 -skew-y-3 transform origin-top-left scale-110" />
 
             <div className="container mx-auto px-4 md:px-6 relative z-10">
-                <div className="max-w-4xl mx-auto rounded-3xl overflow-hidden bg-background border border-white/10 shadow-2xl">
+                <div className="max-w-4xl mx-auto rounded-3xl overflow-hidden bg-background border-2 border-accent/20 shadow-2xl">
                     <div className="grid md:grid-cols-2">
 
                         {/* Left Side: Text */}
                         <div className="p-8 md:p-12 bg-accent/10 flex flex-col justify-center">
-                            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Let&apos;s Work Together</h2>
+                            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Let&apos;s Work Together</h2>
                             <p className="text-muted-foreground mb-8 leading-relaxed">
                                 Whether you have a question or just want to say hi, I&apos;ll try my best to get back to you!
                             </p>

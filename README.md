@@ -1,36 +1,85 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Sai Reddy | Full Stack Java Developer Portfolio
 
-## Getting Started
+<div align="center">
+  <img src="https://img.shields.io/badge/Java-17-orange?style=for-the-badge&logo=java" alt="Java" />
+  <img src="https://img.shields.io/badge/Spring_Boot-3.0+-green?style=for-the-badge&logo=springboot" alt="Spring Boot" />
+  <img src="https://img.shields.io/badge/Next.js-15-black?style=for-the-badge&logo=nextdotjs" alt="Next.js" />
+  <img src="https://img.shields.io/badge/Tailwind_CSS-4.0-38B2AC?style=for-the-badge&logo=tailwindcss" alt="Tailwind CSS" />
+  <img src="https://img.shields.io/badge/AWS-Proven-232F3E?style=for-the-badge&logo=amazonwebservices" alt="AWS" />
+</div>
 
-First, run the development server:
+---
+
+## 🚀 Overview
+
+A high-performance, modern portfolio website built with **Next.js 15**, **React 19**, and **Tailwind CSS 4**. Designed to showcase engineering excellence in Full Stack Java development, featuring microservices architecture highlights, event-driven systems, and cloud-native solutions.
+
+[**Live Demo »**](https://saireddy.dev) | [**Download Resume »**](https://saireddy.dev/resume.pdf)
+
+## ✨ Key Features
+
+- **Performance-First**: Built with Next.js App Router and React Server Components for near-instant load times.
+- **Dynamic Animations**: Smooth, purposeful interactions using Framer Motion.
+- **Microservices Focused**: Dedicated sections showcasing experience with Kafka, Kubernetes, and distributed systems.
+- **Responsive Design**: Fully optimized for mobile, tablet, and desktop viewing.
+- **Dark Mode Native**: Sleek, high-contrast dark theme by default.
+
+## 🛠️ Tech Stack
+
+### Frontend
+- **Framework**: Next.js 15 (App Router)
+- **UI Architecture**: React 19 + TypeScript
+- **Styling**: Tailwind CSS 4.0
+- **Animations**: Framer Motion
+- **Icons**: Lucide React
+
+### Backend (Highlighted in Portfolio)
+- **Core**: Java 17, Spring Boot, Spring Cloud
+- **Streaming**: Apache Kafka, RabbitMQ
+- **Caching**: Redis
+- **Cloud**: AWS (EC2, S3, RDS, Lambda)
+- **Monitoring**: Prometheus, Grafana, ELK
+
+## 🎨 Design Philosophy
+
+The website follows a **Premium Dark Aesthetic** with:
+- Glassmorphism effects
+- Subtle micro-animations
+- High-quality typography (Geist Sans/Mono)
+- Responsive grid layouts
+
+## 🏗️ Project Structure
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+src/
+├── app/            # Next.js App Router (Pages & Layouts)
+├── components/     # Reusable UI components & Sections
+│   ├── layout/     # Header, Footer, Navbar
+│   ├── sections/   # Major page sections (Hero, Experience, etc.)
+│   └── ui/         # Base UI components (Button, Card, etc.)
+├── lib/            # Utility functions & Site Data
+└── styles/         # Global styles & Tailwind config
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚢 Deployment
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Deployed via **GitHub Actions** to **GitHub Pages**.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+To run locally:
 
-## Learn More
+```bash
+# Install dependencies
+npm install
 
-To learn more about Next.js, take a look at the following resources:
+# Run development server
+npm run dev
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# Build for production
+npm run build
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+<div align="center">
+  Built with ❤️ by Sai Reddy
+</div>

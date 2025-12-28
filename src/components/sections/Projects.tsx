@@ -18,8 +18,8 @@ export function Projects() {
                     viewport={{ once: true }}
                     className="text-center mb-16"
                 >
-                    <h2 className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-white/80">
-                        Projects & Portfolio
+                    <h2 className="text-3xl font-bold text-foreground">
+                        Projects
                     </h2>
                     <div className="h-1 w-20 bg-accent mx-auto rounded-full mt-4" />
                 </motion.div>
@@ -42,7 +42,7 @@ export function Projects() {
                                         <Badge variant="outline" className="text-xs">Microservices</Badge>
                                     </div>
 
-                                    <h3 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                                    <h3 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
                                         {FEATURED_PROJECT.title}
                                     </h3>
 
@@ -52,8 +52,8 @@ export function Projects() {
 
                                     <div className="grid grid-cols-2 gap-4 mb-8">
                                         {FEATURED_PROJECT.metrics.map((metric, i) => (
-                                            <div key={i} className="bg-white/5 rounded-lg p-3 border border-white/5">
-                                                <div className="text-lg font-bold text-white">{metric.split(' ')[0]}</div>
+                                            <div key={i} className="bg-muted/50 dark:bg-white/5 rounded-lg p-3 border border-border dark:border-white/5">
+                                                <div className="text-lg font-bold text-foreground">{metric.split(' ')[0]}</div>
                                                 <div className="text-xs text-muted-foreground">{metric.substring(metric.indexOf(' ') + 1)}</div>
                                             </div>
                                         ))}
@@ -61,7 +61,9 @@ export function Projects() {
 
                                     <div className="flex flex-wrap gap-2 mt-auto mb-8">
                                         {FEATURED_PROJECT.tech.map(t => (
-                                            <Badge key={t} className="bg-white/10 hover:bg-white/20">{t}</Badge>
+                                            <Badge key={t} variant="secondary" className="bg-secondary/80 dark:bg-white/10 hover:bg-secondary dark:hover:bg-white/20">
+                                                {t}
+                                            </Badge>
                                         ))}
                                     </div>
 
@@ -70,7 +72,7 @@ export function Projects() {
 
                                 {/* Details Side */}
                                 <div className="bg-black/20 p-8 lg:p-12 border-t lg:border-t-0 lg:border-l border-white/10">
-                                    <h4 className="text-lg font-semibold text-white mb-6">Technical Architecture</h4>
+                                    <h4 className="text-lg font-semibold text-foreground mb-6">Technical Architecture</h4>
 
                                     <div className="space-y-6">
                                         <div>
@@ -117,7 +119,7 @@ export function Projects() {
                             viewport={{ once: true }}
                             transition={{ delay: index * 0.1 }}
                         >
-                            <Card className="h-full bg-white/5 border-white/10 hover:border-accent/30 transition-all group">
+                            <Card className="h-full bg-white/5 border-2 border-accent/20 hover:border-accent/40 transition-all group shadow-xl">
                                 <CardHeader>
                                     <div className="flex justify-between items-start">
                                         <div className="text-4xl opacity-10 font-bold group-hover:opacity-20 transition-opacity">
@@ -132,9 +134,8 @@ export function Projects() {
                                         <div className="text-sm font-medium text-emerald-400 mb-1">Impact</div>
                                         <p className="text-sm text-muted-foreground">{project.impact}</p>
                                     </div>
-                                    <div>
-                                        <div className="text-sm font-medium text-blue-400 mb-1">Tech Stack</div>
-                                        <p className="text-sm text-muted-foreground font-mono bg-black/20 p-2 rounded">{project.tech}</p>
+                                    <div className="mt-4">
+                                        <div className="text-sm text-muted-foreground font-mono bg-muted/50 dark:bg-black/20 p-2 rounded border border-border dark:border-transparent">{project.tech}</div>
                                     </div>
                                 </CardContent>
                             </Card>
