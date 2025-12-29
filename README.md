@@ -1,4 +1,4 @@
-# Sai Reddy | Full Stack Java Developer Portfolio
+# Sai Putha | Full Stack Java Developer Portfolio
 
 <div align="center">
   <img src="https://img.shields.io/badge/Java-17-orange?style=for-the-badge&logo=java" alt="Java" />
