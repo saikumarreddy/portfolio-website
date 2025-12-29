@@ -1,7 +1,7 @@
 import { Github, Linkedin, Mail, Twitter } from "lucide-react";
 
 export const SITE_CONFIG = {
-    name: "Sai Reddy",
+    name: "Sai Putha",
     title: "Full Stack Java Developer",
     email: "saireddyputha1@gmail.com",
     phone: "+1(602) 842-8825",
