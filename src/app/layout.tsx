@@ -48,6 +48,7 @@ export default function RootLayout({
         <link rel="icon" type="image/png" sizes="512x512" href="/favicon.png?v=2" />
       </head>
       <body
+        suppressHydrationWarning={true}
         className={`${inter.variable} ${firaCode.variable} antialiased bg-background text-foreground`}
       >
         <Providers>{children}</Providers>
